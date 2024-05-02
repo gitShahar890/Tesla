@@ -1,0 +1,57 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="frame.master.cs" Inherits="Tesla.frame" %>
+
+<!DOCTYPE html>
+<html>
+<head runat="server">
+    <title>Tesla | SE Project</title>
+    <link href="/images/Tesla_Logo.png" rel="shortcut icon"/>
+    <link href="\styles\FrameStyle.css" rel="stylesheet" type="text/css"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Rubik+Doodle+Shadow&display=swap" rel="stylesheet">
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <script src="/script.js"></script>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <ion-icon name="menu-outline" class="menuLogo"></ion-icon>
+        <div>
+            <ion-icon class="arrow" name="caret-down-outline"></ion-icon>
+            <div class="header">
+                <a href="\htmlPages\Home.aspx?code=4" name="logoA" class="logoCont"><img class="logo" src="/images/Tesla_Logo.png"/></a>
+                <div class="user">
+                    <div>
+                        <label>Hello
+                        <% if ((string)Session["firstName"] != "guest") { %>
+                            <%= Session["firstName"] %>
+                        <% } if ((string)Session["firstName"] == "guest") { %>
+                            Guest
+                        <% }
+%>
+                        </label>
+                    </div>
+                    <%if ((string)Session["firstName"] != "guest"){%>
+                        <div class="logout">
+                            <a href="logout.aspx">LogOut</a>
+                        </div>
+                    <%}%>
+                    <div class="usersCounter">
+                        <%Response.Write(Application["counter"] + " Users"); %>
+                    </div>
+                </div>
+                <div class="HrefContainer">
+                    <a href="\htmlPages\vision.aspx">Vision</a> 
+                    <a href="\htmlPages\history.aspx">History</a>
+                    <a href="\htmlPages\IR.aspx">I.R</a>
+                    <a href="\htmlPages\FSD.aspx">F.S.D</a>
+                    <a href="\htmlPages\cars.aspx">CARS</a>
+                    <a href="\htmlPages\products.aspx">PRODUCTS</a>
+                </div>
+            </div>
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+</body> 
+</html>
