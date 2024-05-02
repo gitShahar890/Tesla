@@ -1,0 +1,36 @@
+﻿body {
+    background:black;
+}
+.line {
+    height: 200px;
+    width: 1px;
+    background-color: white;
+    position:absolute;
+    top: 61.2%;
+    left: 100px;
+}
+.quotes-container{
+    height:200px;
+    width:80%;
+    position:absolute;
+    top:calc(90% - 200px);
+    left:10%;
+    color:white;
+    display:flex;
+    flex-direction:row;
+    justify-content:space-around;
+}
+.quote{
+    height:100%;
+    width:10%;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+}
+.quote img{
+    color:white;
+    height:100px;
+    width:120px;
+}

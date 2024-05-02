@@ -1,0 +1,35 @@
+﻿body {
+    background:black;
+}
+.reports-container{
+    height:200px;
+    width:80%;
+    position:absolute;
+    top:60%;
+    left:10%;
+    display:flex;
+    flex-direction:row;
+    justify-content:space-around;
+    align-items:center;
+    border: 1px white solid;
+    border-radius:20px;
+}
+.report {
+    height: 70%;
+    width: 20%;
+    border: 1px solid white;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    text-decoration:none;
+    color:white;
+}
+.report a{
+    text-decoration:none;
+    color:white;
+}
+.report:hover{
+    transform:translateY(-5px);
+}

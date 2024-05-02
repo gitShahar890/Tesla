@@ -1,0 +1,41 @@
+﻿body {
+    background:black;
+    height:105%;
+}
+img{
+    height:350px;
+    width:550px;
+}
+.container{
+    height:90%;
+    width:80%;
+    position:absolute;
+    left:10%;
+}
+.pdiv {
+    height: 400px;
+    width: 60%;
+    position: absolute;
+    top: 100%;
+    left: 20%;
+}
+
+p {
+    color: white;
+}
+.table{
+    color:white;
+    position:absolute;
+    top:120%;
+    left:37%;
+    border:1px solid white;
+    width: 400px;
+}
+.table tr th{
+    margin-left:20px;
+}
+.table tr td{
+    text-align:center;
+    border-top:1px solid white;
+    font-size:20px;
+}

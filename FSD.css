@@ -1,0 +1,13 @@
+﻿body {
+    background:black;
+}
+.pdiv {
+    height: 400px;
+    width: 60%;
+    position: absolute;
+    top: 100px;
+    left:20%;
+}
+p {
+    color: white;
+}
